@@ -42,7 +42,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Delete exec i3lock -c 000000 -e -f
 
 # screenshooter
-bindsym Print exec xfce4-screenshooter
+bindsym Print exec gnome-screenshot -i
 
 
 # change focus
