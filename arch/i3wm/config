@@ -1,6 +1,8 @@
 # vim:fdm=marker
 # Arch i3 config file maintained by Matthias Pickem
 
+exec setxkbmap -layout de-latin1-nodeadkeys
+
 # introduction {{{
 
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -222,10 +224,10 @@ bar {
 
 # Window Colours
 #                         border  background text    indicator
-  client.focused          $000000 $ffffff    $000000 $ff0000
-  client.focused_inactive $181818 $181818    $ffffff $ff0000
-  client.unfocused        $181818 $181818    $ffffff $ff0000
-  client.urgent           $ff0000 $ff0000    $ffffff $ff0000
+  client.focused          #000000 #ffffff    #000000 #ff0000
+  client.focused_inactive #181818 #181818    #ffffff #ff0000
+  client.unfocused        #181818 #181818    #ffffff #ff0000
+  client.urgent           #ff0000 #ff0000    #ffffff #ff0000
 
 # }}}
 
