@@ -157,7 +157,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+e exec thunar
 
 # start chrome
-bindsym $mod+c exec chromium
+bindsym $mod+c exec google-chrome-stable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -170,7 +170,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Delete exec i3lock -c 000000 -e -f && sleep 1
 
 # screenshooter
-bindsym Print exec gnome-screenshot -i
+bindsym Print exec deepin-screenshot
 
 # }}}
 
