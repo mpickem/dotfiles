@@ -35,7 +35,7 @@ bindsym $mod+Shift+l move right
 
 # vim-like splitting - (s)plit (v)split
 # split in horizontal orientation
-bindsym $mod+v split h 
+bindsym $mod+v split h
 # split in vertical orientation
 bindsym $mod+s split v
 # enter fullscreen mode for the focused container
@@ -157,6 +157,9 @@ bindsym $mod+e exec thunar
 # start chrome
 bindsym $mod+c exec google-chrome
 
+# start firefox-esr
+bindsym $mod+x exec firefox-esr
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -216,7 +219,7 @@ bar {
 		inactive_workspace #333333 #222222 #888888
 		urgent_workspace   #2f343a #900000 #ffffff
 		binding_mode       #2f343a #900000 #ffffff
-  
+
   }
 }
 
