@@ -161,7 +161,7 @@ bindsym $mod+c exec google-chrome
 bindsym $mod+x exec firefox-esr
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+Shift+d exec dmenu_run -l 7
