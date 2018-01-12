@@ -7,6 +7,8 @@ alias gf='gfortran -g -fbacktrace -fimplicit-none'
 alias vim='TERM=xterm-256color && vim'
 alias tmux='TERM=xterm-256color && tmux'
 
+alias ag='ag -u --numbers'
+
 alias shutdown='sudo shutdown -P now'
 alias reboot='sudo shutdown -r now'
 alias update='sudo apt-get update && sudo apt-get upgrade'
@@ -36,4 +38,33 @@ extract () {
     else
   echo "'$1' is not a valid file"
 fi
+}
+
+texmk () {
+  if [ -n "$1" ]; then
+    name=$1
+    name=${name%%tex}
+    name=${name%%.}
+    pdflatex ${name}.tex
+    bibtex ${name}.aux
+    pdflatex ${name}.tex
+    pdflatex ${name}.tex
+  else
+    echo "Please provide tex file"
+  fi
+}
+texcl () {
+  if [ -n "$1" ]; then
+    name=$1
+    name=${name%%tex}
+    name=${name%%.}
+    rm -v ${name}.aux
+    rm -v ${name}.bbl
+    rm -v ${name}.blg
+    rm -v ${name}.log
+    rm -v ${name}.out
+    rm -v ${name}.toc
+  else
+    echo "Please provide tex file"
+  fi
 }
