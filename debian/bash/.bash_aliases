@@ -68,3 +68,15 @@ texcl () {
     echo "Please provide tex file"
   fi
 }
+
+# install : librsvg2-bin
+svgtopdf () {
+  if [ -n "$1" ]; then
+    name=$1
+    name=${name%%svg}
+    name=${name%%.}
+    rsvg-convert -f pdf -o ${name}.pdf ${name}.svg
+  else
+    echo "Please provide svg file"
+  fi
+}
