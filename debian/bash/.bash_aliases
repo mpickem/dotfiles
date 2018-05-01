@@ -4,7 +4,6 @@ alias lla='la'
 alias lq='ls -lh'
 alias llq='lq'
 alias ..='cd ..'
-alias -='cd -'
 
 mkcd () {
   mkdir $1
