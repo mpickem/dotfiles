@@ -3,14 +3,21 @@ alias la='ls -lah'
 alias lla='la'
 alias lq='ls -lh'
 alias llq='lq'
+alias ..='cd ..'
+alias -='cd -'
+
+mkcd () {
+  mkdir $1
+  cd $1
+}
+
 alias gf='gfortran -g -fbacktrace -fimplicit-none'
 alias vim='TERM=xterm-256color && vim'
-alias tmux='TERM=xterm-256color && tmux'
-
 alias ag='ag -u --numbers'
 
 alias shutdown='sudo shutdown -P now'
 alias reboot='sudo shutdown -r now'
+alias restart='sudo shutdown -r now'
 alias update='sudo apt-get update && sudo apt-get upgrade'
 
 # git stuff
@@ -40,6 +47,14 @@ extract () {
 fi
 }
 
+sshpi () {
+  if [ -n "$1" ]; then
+    ssh -X ${1}@ipadress -p port
+  else
+    echo "Usage: sshpi 'username'"
+  fi
+}
+
 texmk () {
   if [ -n "$1" ]; then
     name=$1
@@ -58,12 +73,12 @@ texcl () {
     name=$1
     name=${name%%tex}
     name=${name%%.}
-    rm -v ${name}.aux
-    rm -v ${name}.bbl
-    rm -v ${name}.blg
-    rm -v ${name}.log
-    rm -v ${name}.out
-    rm -v ${name}.toc
+    rm -fv ${name}.aux
+    rm -fv ${name}.bbl
+    rm -fv ${name}.blg
+    rm -fv ${name}.log
+    rm -fv ${name}.out
+    rm -fv ${name}.toc
   else
     echo "Please provide tex file"
   fi
