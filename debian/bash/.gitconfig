@@ -3,6 +3,7 @@
 	email = matthias.pickem@gmail.com
 [core]
 	editor = vim
+  pager  = less -F -X
 [push]
 	default = simple
 [alias]
