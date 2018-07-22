@@ -14,13 +14,10 @@ mkcd () {
   cd $1
 }
 
-vishow () {
-  git show "$1" | vi -
-}
-
 alias gf='gfortran -g -fbacktrace -fimplicit-none'
 alias vim='TERM=xterm-256color && vim'
 alias vilo='vim -u NONE "+set nocompatible" "+set noswapfile"'
+alias vilog="git log -p -40 | vi - -R -c 'set foldmethod=syntax'"
 alias ag='ag -u --numbers'
 
 alias shutdown='sudo shutdown -P now'
@@ -32,7 +29,11 @@ alias update='sudo apt-get update && sudo apt-get upgrade'
 . ~/.git-completion.sh
 . ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1='\u@\h:\w$(__git_ps1 " (%s)")\$ '
+if [[ "$TERM" =~ 256color ]]; then
+  export PS1='\e[1m\e[38;5;249m\w$(__git_ps1 " \e[38;5;124m(%s)")\e[0m '
+else
+  export PS1='\w$(__git_ps1 " (%s)") '
+fi
 
 
 extract () {
