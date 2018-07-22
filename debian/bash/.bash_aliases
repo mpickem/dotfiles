@@ -4,10 +4,15 @@ alias lla='la'
 alias lq='ls -lh'
 alias llq='lq'
 alias ..='cd ..'
+alias cd='cd -P'
 
 mkcd () {
   mkdir $1
   cd $1
+}
+
+vishow () {
+  git show "$1" | vi -
 }
 
 alias gf='gfortran -g -fbacktrace -fimplicit-none'
