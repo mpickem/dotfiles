@@ -3,8 +3,11 @@ alias la='ls -lah'
 alias lla='la'
 alias lq='ls -lh'
 alias llq='lq'
+alias lt='ls -lhtr'
+alias llt='lt'
 alias ..='cd ..'
 alias cd='cd -P'
+alias rm='rm -i'
 
 mkcd () {
   mkdir $1
@@ -17,6 +20,7 @@ vishow () {
 
 alias gf='gfortran -g -fbacktrace -fimplicit-none'
 alias vim='TERM=xterm-256color && vim'
+alias vilo='vim -u NONE "+set nocompatible"'
 alias ag='ag -u --numbers'
 
 alias shutdown='sudo shutdown -P now'
@@ -51,6 +55,7 @@ extract () {
 fi
 }
 
+
 sshpi () {
   if [ -n "$1" ]; then
     ssh -X ${1}@ipadress -p port
@@ -58,6 +63,7 @@ sshpi () {
     echo "Usage: sshpi 'username'"
   fi
 }
+
 
 texmk () {
   if [ -n "$1" ]; then
@@ -72,6 +78,8 @@ texmk () {
     echo "Please provide tex file"
   fi
 }
+
+
 texcl () {
   if [ -n "$1" ]; then
     name=$1
@@ -87,6 +95,7 @@ texcl () {
     echo "Please provide tex file"
   fi
 }
+
 
 # install : librsvg2-bin
 svgtopdf () {
