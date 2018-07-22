@@ -20,7 +20,7 @@ vishow () {
 
 alias gf='gfortran -g -fbacktrace -fimplicit-none'
 alias vim='TERM=xterm-256color && vim'
-alias vilo='vim -u NONE "+set nocompatible"'
+alias vilo='vim -u NONE "+set nocompatible" "+set noswapfile"'
 alias ag='ag -u --numbers'
 
 alias shutdown='sudo shutdown -P now'
