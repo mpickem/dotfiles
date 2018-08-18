@@ -1,6 +1,10 @@
+# list commands
 alias lq='ls -lh'
-alias la='ls -la'
+alias la='ls -lha'
 alias l='ls -l'
+alias ll='ls -la@e'
+
+alias cppcompile='c++ -std=c++11 -stdlib'
 
 # git stuff
 . ~/.git-completion.sh
