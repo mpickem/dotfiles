@@ -187,6 +187,14 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle # m
 bindsym XF86KbdBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86KbdBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
+# calculator & other stuff
+bindsym XF86Calculator exec --no-startup-id speedcrunch
+bindsym XF86MyComputer exec --no-startup-id thunar
+bindsym XF86HomePage   exec --no-startup-id google-chrome
+bindsym XF86Tools      exec --no-startup-id pavucontrol
+
+# to get these XF.. use 'xmodmap -pke' and 'xev'
+
 # }}}
 
 # appearance {{{
