@@ -171,8 +171,8 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+Delete exec i3lock -c 000000 -e -f && sleep 1
 
 # screenshooter
-# bindsym Print exec gnome-screenshot -i
-bindsym Print exec flameshot gui
+bindsym Print exec gnome-screenshot -i
+# bindsym Print exec flameshot gui
 # github.com/lupoDharkael/flameshot
 
 # }}}
